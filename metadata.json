@@ -1,0 +1,7 @@
+{
+  "name": "Furniture Collection Catalog",
+  "description": "A professional furniture catalog application allowing users to browse products categorized by various design collections and room types.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}

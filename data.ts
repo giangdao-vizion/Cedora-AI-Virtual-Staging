@@ -1,0 +1,1156 @@
+
+import { Product } from './types';
+
+/**
+ * Helper to ensure asset paths are correctly formatted for the browser.
+ * Removes leading slashes and ensures paths point to the local assets folder.
+ */
+const getAssetUrl = (path: string) => {
+  if (!path) return '';
+  // Remove leading slash if present to make it a proper relative path from root
+  return path.startsWith('/') ? path.substring(1) : path;
+};
+
+export const products: Product[] = [
+  {
+    "productId": 9007931425018,
+    "name": "Liverpool 2 Door 1 Drawer TV Unit (Natural)",
+    "handle": "liverpool-2-door-1-drawer-tv-unit-natural",
+    "productUrl": "https://cedora.com.au/products/liverpool-2-door-1-drawer-tv-unit-natural",
+    "price": 1019.15,
+    "room": "Living Room",
+    "productType": "TV Unit",
+    "collectionNames": [
+      "Liverpool",
+      "Living Room",
+      "New Arrivals",
+      "Sideboards & TV Unit"
+    ],
+    "imageUrls": [
+      "https://cedora.com.au/cdn/shop/files/L-TV_Unit-Natural_Measurement.jpg?v=1763637381"
+    ]
+  },
+  {
+    "productId": 9007890563322,
+    "name": "Liverpool Dining Chair (Natural)",
+    "handle": "liverpool-dining-chair-natural",
+    "productUrl": "https://cedora.com.au/products/liverpool-dining-chair-natural",
+    "price": 224.25,
+    "room": "Dining Room",
+    "productType": "Dining Chair",
+    "collectionNames": [
+      "Dining Room",
+      "Liverpool",
+      "New Arrivals"
+    ],
+    "imageUrls": [
+      "https://cedora.com.au/cdn/shop/files/L-DiningChair-NaturalMeasurement.jpg?v=1764927256"
+    ]
+  },
+  {
+    "productId": 9007863234810,
+    "name": "Liverpool Dining Table 240cm (Natural)",
+    "handle": "liverpool-dining-table-240cm",
+    "productUrl": "https://cedora.com.au/products/liverpool-dining-table-240cm",
+    "price": 1359.15,
+    "room": "Dining Room",
+    "productType": "Dining Table",
+    "collectionNames": [
+      "Dining Room",
+      "Liverpool",
+      "New Arrivals"
+    ],
+    "imageUrls": [
+      "https://cedora.com.au/cdn/shop/files/L-DiningTable240-NaturalMeasurement.jpg?v=1767140004"
+    ]
+  },
+  {
+    "productId": 8905675538682,
+    "name": "Liverpool Double Bed Frame (Black)",
+    "handle": "liverpool-double-bed-frame-black",
+    "productUrl": "https://cedora.com.au/products/liverpool-double-bed-frame-black",
+    "price": 1050,
+    "room": "Bedroom",
+    "productType": "Bed Frame",
+    "collectionNames": [
+      "Bed Frames",
+      "Bedroom",
+      "Liverpool",
+      "Liverpool Bed Frames",
+      "New Arrivals"
+    ],
+    "imageUrls": [
+      "https://cedora.com.au/cdn/shop/files/L-Bed_Frame-Double_Bed-Black_Measurement.jpg?v=1769932028"
+    ]
+  },
+  {
+    "productId": 8905675374842,
+    "name": "Liverpool Queen Bed Frame (Black)",
+    "handle": "liverpool-queen-bed-frame-black",
+    "productUrl": "https://cedora.com.au/products/liverpool-queen-bed-frame-black",
+    "price": 1125,
+    "room": "Bedroom",
+    "productType": "Bed Frame",
+    "collectionNames": [
+      "Bed Frames",
+      "Bedroom",
+      "Liverpool",
+      "Liverpool Bed Frames",
+      "New Arrivals"
+    ],
+    "imageUrls": [
+      "https://cedora.com.au/cdn/shop/files/L-Black-BedFrame-Scene5_227b6296-9bc0-4721-89ea-7f7dd10c738c.jpg?v=1761708466",
+      "https://cedora.com.au/cdn/shop/files/L-Black-BedFrame-Scene1_4d9e89cc-b241-41b2-bd51-9e208688e3b3.jpg?v=1761708466",
+      "https://cedora.com.au/cdn/shop/files/L-Black-BedFrame-Scene3_fb812dba-1939-4df1-a292-a9b91e4bed93.jpg?v=1761708223",
+      "https://cedora.com.au/cdn/shop/files/L-BedFrame-Black1_fd3722f6-eeef-49ee-8a5b-26cea107a24a.jpg?v=1769932240",
+      "https://cedora.com.au/cdn/shop/files/L-BedFrame-Black3_0eb6101d-c7b2-455d-b112-adb23e57966c.jpg?v=1769932240",
+      "https://cedora.com.au/cdn/shop/files/L-BedFrame-Black4_d5617a60-c977-4bf0-a85f-534ed27d4f7a.jpg?v=1769932240",
+      "https://cedora.com.au/cdn/shop/files/L-BedFrame-Black6_deca7f49-e8c8-4918-966a-ac24a6107981.jpg?v=1769932240"
+    ]
+  },
+  {
+    "productId": 8905675211002,
+    "name": "Liverpool King Bed Frame (Black)",
+    "handle": "liverpool-king-bed-frame-black",
+    "productUrl": "https://cedora.com.au/products/liverpool-king-bed-frame-black",
+    "price": 1200,
+    "room": "Bedroom",
+    "productType": "Bed Frame",
+    "collectionNames": [
+      "Bed Frames",
+      "Bedroom",
+      "Liverpool",
+      "Liverpool Bed Frames",
+      "New Arrivals"
+    ],
+    "imageUrls": [
+      "https://cedora.com.au/cdn/shop/files/L-Bed_Frame-King-Black_Measurement.jpg?v=1769932240"
+    ]
+  },
+  {
+    "productId": 8905674752250,
+    "name": "Liverpool 5 Drawer Tallboy (Black)",
+    "handle": "liverpool-5-drawer-tallboy-black",
+    "productUrl": "https://cedora.com.au/products/liverpool-5-drawer-tallboy-black",
+    "price": 825,
+    "room": "Bedroom",
+    "productType": "Tallboy",
+    "collectionNames": [
+      "Bedroom",
+      "Liverpool",
+      "New Arrivals",
+      "Tallboy"
+    ],
+    "imageUrls": [
+      "https://cedora.com.au/cdn/shop/files/L-5_Drawers_Beside_Table-Black_Measurement.jpg?v=1769930532"
+    ]
+  },
+  {
+    "productId": 8905673539834,
+    "name": "Liverpool Queen Bed Frame (Natural)",
+    "handle": "liverpool-queen-bed-frame-natural",
+    "productUrl": "https://cedora.com.au/products/liverpool-queen-bed-frame-natural",
+    "price": 1275,
+    "room": "Bedroom",
+    "productType": "Bed Frame",
+    "collectionNames": [
+      "Bed Frames",
+      "Bedroom",
+      "Liverpool",
+      "Liverpool Bed Frames",
+      "New Arrivals"
+    ],
+    "imageUrls": [
+      "https://cedora.com.au/cdn/shop/files/L-Bed_Frame-Queen-Natural_Measurement.jpg?v=1769932730"
+    ]
+  },
+  {
+    "productId": 9042663112954,
+    "name": "Liverpool Mirror (Natural)",
+    "handle": "liverpool-mirror-1",
+    "productUrl": "https://cedora.com.au/products/liverpool-mirror-1",
+    "price": 292.5,
+    "room": "Bedroom",
+    "productType": "Mirror",
+    "collectionNames": [
+      "Bedroom",
+      "Liverpool",
+      "Mirror"
+    ],
+    "imageUrls": [
+      "https://cedora.com.au/cdn/shop/files/L-Mirror-Natural-Measurement.jpg?v=1767140341"
+    ]
+  },
+  {
+    "productId": 9042662195450,
+    "name": "Liverpool Mirror (Black)",
+    "handle": "liverpool-mirror",
+    "productUrl": "https://cedora.com.au/products/liverpool-mirror",
+    "price": 292.5,
+    "room": "Bedroom",
+    "productType": "Mirror",
+    "collectionNames": [
+      "Bedroom",
+      "Liverpool"
+    ],
+    "imageUrls": [
+      "https://cedora.com.au/cdn/shop/files/L-Mirror-Black-Measurement.jpg?v=1767140474"
+    ]
+  },
+  {
+    "productId": 9008001810682,
+    "name": "Liverpool 2 Door 1 Drawer TV Unit (Black)",
+    "handle": "liverpool-2-door-1-drawer-tv-unit-black",
+    "productUrl": "https://cedora.com.au/products/liverpool-2-door-1-drawer-tv-unit-black",
+    "price": 899.25,
+    "room": "Living Room",
+    "productType": "TV Unit",
+    "collectionNames": [
+      "Liverpool",
+      "Living Room",
+      "New Arrivals",
+      "Sideboards & TV Unit"
+    ],
+    "imageUrls": [
+      "https://cedora.com.au/cdn/shop/files/L-TVUnit-BlackMeasurement.jpg?v=1763637795"
+    ]
+  },
+  {
+    "productId": 9007999516922,
+    "name": "Liverpool End Table (Black)",
+    "handle": "liverpool-end-table-black",
+    "productUrl": "https://cedora.com.au/products/liverpool-end-table-black",
+    "price": 240,
+    "room": "Living Room",
+    "productType": "Table",
+    "collectionNames": [
+      "Liverpool",
+      "Living Room",
+      "New Arrivals",
+      "Tables"
+    ],
+    "imageUrls": [
+      "https://cedora.com.au/cdn/shop/files/L-End_Table-Black_Measurement.jpg?v=1767139483"
+    ]
+  },
+  {
+    "productId": 9007992996090,
+    "name": "Liverpool Console Table (Black)",
+    "handle": "liverpool-console-table-black",
+    "productUrl": "https://cedora.com.au/products/liverpool-console-table-black",
+    "price": 277.5,
+    "room": "Living Room",
+    "productType": "Table",
+    "collectionNames": [
+      "Liverpool",
+      "Living Room",
+      "New Arrivals",
+      "Tables"
+    ],
+    "imageUrls": [
+      "https://cedora.com.au/cdn/shop/files/L-ConsoleTable-BlackMeasurement.jpg?v=1767139079"
+    ]
+  },
+  {
+    "productId": 9007985459450,
+    "name": "Liverpool Cofffee Table (Black)",
+    "handle": "liverpool-cofffee-table-black",
+    "productUrl": "https://cedora.com.au/products/liverpool-cofffee-table-black",
+    "price": 337.5,
+    "room": "Living Room",
+    "productType": "Table",
+    "collectionNames": [
+      "Liverpool",
+      "Living Room",
+      "New Arrivals",
+      "Tables"
+    ],
+    "imageUrls": [
+      "https://cedora.com.au/cdn/shop/files/L-CoffeeTable-BlackMeasurement.jpg?v=1767139594"
+    ]
+  },
+  {
+    "productId": 9007976743162,
+    "name": "Liverpool Dining Chair (Black)",
+    "handle": "liverpool-dining-chair-black",
+    "productUrl": "https://cedora.com.au/products/liverpool-dining-chair-black",
+    "price": 168.18,
+    "room": "Dining Room",
+    "productType": "Dining Chair",
+    "collectionNames": [
+      "Dining Room",
+      "Liverpool",
+      "New Arrivals"
+    ],
+    "imageUrls": [
+      "https://cedora.com.au/cdn/shop/files/L-DiningChair-BlackMeasurement.jpg?v=1764927540"
+    ]
+  },
+  {
+    "productId": 9007974187258,
+    "name": "Liverpool 2 Door 3 Drawer Sideboard (Black)",
+    "handle": "liverpool-2-door-3-drawer-sideboard-black",
+    "productUrl": "https://cedora.com.au/products/liverpool-2-door-3-drawer-sideboard-black",
+    "price": 1124.25,
+    "room": "Living Room",
+    "productType": "Sideboard",
+    "collectionNames": [
+      "Liverpool",
+      "Living Room",
+      "New Arrivals",
+      "Sideboards & TV Unit"
+    ],
+    "imageUrls": [
+      "https://cedora.com.au/cdn/shop/files/L-Sideboard-BlackMeasurement.jpg?v=1767139175"
+    ]
+  },
+  {
+    "productId": 9007955837178,
+    "name": "Liverpool Dining Table 190cm (Black)",
+    "handle": "liverpool-dining-table-190cm-black",
+    "productUrl": "https://cedora.com.au/products/liverpool-dining-table-190cm-black",
+    "price": 1104.15,
+    "room": "Dining Room",
+    "productType": "Dining Table",
+    "collectionNames": [
+      "Dining Room",
+      "Liverpool",
+      "New Arrivals"
+    ],
+    "imageUrls": [
+      "https://cedora.com.au/cdn/shop/files/L-DiningTable190-BlackMeasurement.jpg?v=1763637543"
+    ]
+  },
+  {
+    "productId": 9007940501754,
+    "name": "Liverpool Dining Table 240cm (Black)",
+    "handle": "liverpool-dining-table-240cm-black",
+    "productUrl": "https://cedora.com.au/products/liverpool-dining-table-240cm-black",
+    "price": 1359.15,
+    "room": "Dining Room",
+    "productType": "Dining Table",
+    "collectionNames": [
+      "Dining Room",
+      "Liverpool",
+      "New Arrivals"
+    ],
+    "imageUrls": [
+      "https://cedora.com.au/cdn/shop/files/L-DiningTable240-BlackMeasurement.jpg?v=1764924347"
+    ]
+  },
+  {
+    "productId": 9007918776570,
+    "name": "Liverpool End Table (Natural)",
+    "handle": "liverpool-end-table-natural",
+    "productUrl": "https://cedora.com.au/products/liverpool-end-table-natural",
+    "price": 272,
+    "room": "Living Room",
+    "productType": "Table",
+    "collectionNames": [
+      "Liverpool",
+      "Living Room",
+      "New Arrivals",
+      "Tables"
+    ],
+    "imageUrls": [
+      "https://cedora.com.au/cdn/shop/files/L-EndTable-NaturalMeasurement.jpg?v=1767139732"
+    ]
+  },
+  {
+    "productId": 9007917990138,
+    "name": "Liverpool Console Table (Natural)",
+    "handle": "liverpool-console-table-natural",
+    "productUrl": "https://cedora.com.au/products/liverpool-console-table-natural",
+    "price": 314.5,
+    "room": "Living Room",
+    "productType": "Table",
+    "collectionNames": [
+      "Liverpool",
+      "Living Room",
+      "New Arrivals",
+      "Tables"
+    ],
+    "imageUrls": [
+      "https://cedora.com.au/cdn/shop/files/L-ConsoleTable-NaturalMeasurement.jpg?v=1767139323"
+    ]
+  },
+  {
+    "productId": 9007913533690,
+    "name": "Liverpool Coffee Table (Natural)",
+    "handle": "liverpool-coffee-table-natural",
+    "productUrl": "https://cedora.com.au/products/liverpool-coffee-table-natural",
+    "price": 382.5,
+    "room": "Living Room",
+    "productType": "Coffee Table",
+    "collectionNames": [
+      "Liverpool",
+      "Living Room",
+      "New Arrivals",
+      "Tables"
+    ],
+    "imageUrls": [
+      "https://cedora.com.au/cdn/shop/files/L-CoffeeTable-NaturalMeasurement.jpg?v=1767139870"
+    ]
+  },
+  {
+    "productId": 9007887384826,
+    "name": "Liverpool 2 Door 3 Drawer Sideboard (Natural)",
+    "handle": "liverpool-2-door-3-drawer-sideboard-natural",
+    "productUrl": "https://cedora.com.au/products/liverpool-2-door-3-drawer-sideboard-natural",
+    "price": 1274.15,
+    "room": "Living Room",
+    "productType": "Sideboard",
+    "collectionNames": [
+      "Liverpool",
+      "Living Room",
+      "New Arrivals",
+      "Sideboards & TV Unit"
+    ],
+    "imageUrls": [
+      "https://cedora.com.au/cdn/shop/files/L-Sideboard-Natural_Measurement.jpg?v=1764775394"
+    ]
+  },
+  {
+    "productId": 9007865790714,
+    "name": "Liverpool Dining Table 190cm (Natural)",
+    "handle": "liverpool-dining-table-190cm",
+    "productUrl": "https://cedora.com.au/products/liverpool-dining-table-190cm",
+    "price": 1104.15,
+    "room": "Dining Room",
+    "productType": "Dining Table",
+    "collectionNames": [
+      "Dining Room",
+      "Liverpool",
+      "New Arrivals"
+    ],
+    "imageUrls": [
+      "https://cedora.com.au/cdn/shop/files/L-DiningTable190-NaturalMeasurement.jpg?v=1763615533"
+    ]
+  },
+  {
+    "productId": 8920387387642,
+    "name": "Manchester 6 Drawer Chest",
+    "handle": "manchester-6-drawer-chest",
+    "productUrl": "https://cedora.com.au/products/manchester-6-drawer-chest",
+    "price": 849.15,
+    "room": "Bedroom",
+    "productType": "Chest of Drawers",
+    "collectionNames": [
+      "Bedroom",
+      "Chest",
+      "Manchester"
+    ],
+    "imageUrls": [
+      "https://cedora.com.au/cdn/shop/files/M-Drawer_Chest_-_Measurement.jpg?v=1762228989"
+    ]
+  },
+  {
+    "productId": 8920386437370,
+    "name": "Manchester 5 Drawer Tallboy",
+    "handle": "manchester-5-drawer-tallboy",
+    "productUrl": "https://cedora.com.au/products/manchester-5-drawer-tallboy",
+    "price": 764.15,
+    "room": "Bedroom",
+    "productType": "Tallboy",
+    "collectionNames": [
+      "Bedroom",
+      "Manchester",
+      "Tallboy"
+    ],
+    "imageUrls": [
+      "https://cedora.com.au/cdn/shop/files/M-Drawer_Tallboy_-_Measurement.jpg?v=1762226947"
+    ]
+  },
+  {
+    "productId": 8920384176378,
+    "name": "Manchester 2 Drawer Bedside Table",
+    "handle": "manchester-2-drawer-bedside-table",
+    "productUrl": "https://cedora.com.au/products/manchester-2-drawer-bedside-table",
+    "price": 261.75,
+    "room": "Bedroom",
+    "productType": "Chest of Drawers",
+    "collectionNames": [
+      "Bedroom",
+      "Bedside table",
+      "Manchester"
+    ],
+    "imageUrls": [
+      "https://cedora.com.au/cdn/shop/files/M-Beside_Table_-_Measurement.jpg?v=1762229216"
+    ]
+  },
+  {
+    "productId": 8905674981626,
+    "name": "Liverpool 6 Drawer Chest (Black)",
+    "handle": "liverpool-6-drawer-chest-black",
+    "productUrl": "https://cedora.com.au/products/liverpool-6-drawer-chest-black",
+    "price": 900,
+    "room": "Bedroom",
+    "productType": "Chest of Drawers",
+    "collectionNames": [
+      "Bedroom",
+      "Chest",
+      "Liverpool",
+      "New Arrivals"
+    ],
+    "imageUrls": [
+      "https://cedora.com.au/cdn/shop/files/L-6_Drawers_Beside_Table-Black_Measurement.jpg?v=1769930844"
+    ]
+  },
+  {
+    "productId": 8905674326266,
+    "name": "Liverpool 2 Drawer Bedside Table (Black)",
+    "handle": "liverpool-2-drawer-bedside-table-black",
+    "productUrl": "https://cedora.com.au/products/liverpool-2-drawer-bedside-table-black",
+    "price": 337.5,
+    "room": "Bedroom",
+    "productType": "Bedside Table",
+    "collectionNames": [
+      "Bedroom",
+      "Bedside table",
+      "Liverpool",
+      "New Arrivals"
+    ],
+    "imageUrls": [
+      "https://cedora.com.au/cdn/shop/files/L-2_Drawers_Beside_Table-Black_Measurement.jpg?v=1769929230"
+    ]
+  },
+  {
+    "productId": 8905674031354,
+    "name": "Liverpool Double Bed Frame (Natural)",
+    "handle": "liverpool-double-bed-frame-natural",
+    "productUrl": "https://cedora.com.au/products/liverpool-double-bed-frame-natural",
+    "price": 1190,
+    "room": "Bedroom",
+    "productType": "Bed Frame",
+    "collectionNames": [
+      "Bed Frames",
+      "Bedroom",
+      "Liverpool",
+      "Liverpool Bed Frames",
+      "New Arrivals"
+    ],
+    "imageUrls": [
+      "https://cedora.com.au/cdn/shop/files/L-Bed_Frame-Double_Bed-Natural_Measurement.jpg?v=1769932138"
+    ]
+  },
+  {
+    "productId": 8905672720634,
+    "name": "Liverpool King Bed Frame (Natural)",
+    "handle": "liverpool-king-bed-frame-natural",
+    "productUrl": "https://cedora.com.au/products/liverpool-king-bed-frame-natural",
+    "price": 1360,
+    "room": "Bedroom",
+    "productType": "Bed Frame",
+    "collectionNames": [
+      "Bed Frames",
+      "Bedroom",
+      "Liverpool",
+      "Liverpool Bed Frames",
+      "New Arrivals"
+    ],
+    "imageUrls": [
+      "https://cedora.com.au/cdn/shop/files/L-Bed_Frame-King-Natural_Measurement.jpg?v=1769932357"
+    ]
+  },
+  {
+    "productId": 8905671475450,
+    "name": "Liverpool 6 Drawer Chest (Natural)",
+    "handle": "liverpool-6-drawer-chest-natural",
+    "productUrl": "https://cedora.com.au/products/liverpool-6-drawer-chest-natural",
+    "price": 1020,
+    "room": "Bedroom",
+    "productType": "Chest of Drawers",
+    "collectionNames": [
+      "Bedroom",
+      "Chest",
+      "Liverpool",
+      "New Arrivals"
+    ],
+    "imageUrls": [
+      "https://cedora.com.au/cdn/shop/files/L-6_Drawers_Beside_Table-Natural_Measurement.jpg?v=1769930954"
+    ]
+  },
+  {
+    "productId": 8905666396410,
+    "name": "Liverpool 5 Drawer Tallboy (Natural)",
+    "handle": "liverpool-5-drawer-tallboy-natural",
+    "productUrl": "https://cedora.com.au/products/liverpool-5-drawer-tallboy-natural",
+    "price": 1100,
+    "room": "Bedroom",
+    "productType": "Tallboy",
+    "collectionNames": [
+      "Bedroom",
+      "Liverpool",
+      "New Arrivals",
+      "Tallboy"
+    ],
+    "imageUrls": [
+      "https://cedora.com.au/cdn/shop/files/L-5_Drawers_Beside_Table-Natural_Measurement.jpg?v=1769930651"
+    ]
+  },
+  {
+    "productId": 8905666101498,
+    "name": "Liverpool 2 Drawer Bedside Table (Natural)",
+    "handle": "liverpool-2-drawer-bedside-table-natural",
+    "productUrl": "https://cedora.com.au/products/liverpool-2-drawer-bedside-table-natural",
+    "price": 382.5,
+    "room": "Bedroom",
+    "productType": "Bedside Table",
+    "collectionNames": [
+      "Bedroom",
+      "Bedside table",
+      "Liverpool",
+      "New Arrivals"
+    ],
+    "imageUrls": [
+      "https://cedora.com.au/cdn/shop/files/L-2_Drawers_Beside_Table-Natural_Measurement.jpg?v=1769929367"
+    ]
+  },
+  {
+    "productId": 8920440045818,
+    "name": "Manchester Double Bed Frame",
+    "handle": "manchester-double-bed-frame",
+    "productUrl": "https://cedora.com.au/products/manchester-double-bed-frame",
+    "price": 977.5,
+    "room": "Bedroom",
+    "productType": "Bed Frame",
+    "collectionNames": [
+      "Bed Frames",
+      "Bedroom",
+      "Manchester",
+      "Manchester Bed Frames"
+    ],
+    "imageUrls": [
+      "https://cedora.com.au/cdn/shop/files/M-Double-Measurement.jpg?v=1762226165"
+    ]
+  },
+  {
+    "productId": 8920434016506,
+    "name": "Manchester King Bed Frame",
+    "handle": "manchester-king-bed-frame",
+    "productUrl": "https://cedora.com.au/products/manchester-king-bed-frame",
+    "price": 1350,
+    "room": "Bedroom",
+    "productType": "Bed Frame",
+    "collectionNames": [
+      "Bed Frames",
+      "Bedroom",
+      "Manchester",
+      "Manchester Bed Frames"
+    ],
+    "imageUrls": [
+      "https://cedora.com.au/cdn/shop/files/M-King-Measurement.jpg?v=1762226324"
+    ]
+  },
+  {
+    "productId": 8920426152186,
+    "name": "Manchester Queen Bed Frame",
+    "handle": "manchester-queen-bed-frame",
+    "productUrl": "https://cedora.com.au/products/manchester-queen-bed-frame",
+    "price": 1062.5,
+    "room": "Bedroom",
+    "productType": "Bed Frame",
+    "collectionNames": [
+      "Bed Frames",
+      "Bedroom",
+      "Manchester",
+      "Manchester Bed Frames"
+    ],
+    "imageUrls": [
+      "https://cedora.com.au/cdn/shop/files/M-Queen_-_Measurement.jpg?v=1762226369"
+    ]
+  },
+  {
+    "productId": 8920417599738,
+    "name": "Manchester Double Bed - 2 Drawers",
+    "handle": "manchester-double-bed-2-drawers",
+    "productUrl": "https://cedora.com.au/products/manchester-double-bed-2-drawers",
+    "price": 1147.5,
+    "room": "Bedroom",
+    "productType": "Chest of Drawers",
+    "collectionNames": [
+      "Bed Frames",
+      "Bedroom",
+      "Manchester",
+      "Manchester Bed Frames"
+    ],
+    "imageUrls": [
+      "https://cedora.com.au/cdn/shop/files/M-Drawers-Double_Bed_-_Measurement.jpg?v=1762226549"
+    ]
+  },
+  {
+    "productId": 8920409342202,
+    "name": "Manchester King Bed - 2 Drawers",
+    "handle": "manchester-king-bed-2-drawers",
+    "productUrl": "https://cedora.com.au/products/manchester-king-bed-2-drawers",
+    "price": 1317.5,
+    "room": "Bedroom",
+    "productType": "Chest of Drawers",
+    "collectionNames": [
+      "Bed Frames",
+      "Bedroom",
+      "Manchester",
+      "Manchester Bed Frames"
+    ],
+    "imageUrls": [
+      "https://cedora.com.au/cdn/shop/files/M-Drawers-King_Bed_-_Measurement.jpg?v=1762226671"
+    ]
+  },
+  {
+    "productId": 8920393842938,
+    "name": "Manchester Queen Bed - 2 Drawers",
+    "handle": "manchester-queen-bed-2-drawers",
+    "productUrl": "https://cedora.com.au/products/manchester-queen-bed-2-drawers",
+    "price": 1232.5,
+    "room": "Bedroom",
+    "productType": "Chest of Drawers",
+    "collectionNames": [
+      "Bed Frames",
+      "Bedroom",
+      "Manchester",
+      "Manchester Bed Frames"
+    ],
+    "imageUrls": [
+      "https://cedora.com.au/cdn/shop/files/M-Drawers-Queen_Bed_-_Measurement.jpg?v=1762226800"
+    ]
+  },
+  {
+    "productId": 8920388206842,
+    "name": "Manchester Mirror",
+    "handle": "manchester-mirror-1",
+    "productUrl": "https://cedora.com.au/products/manchester-mirror-1",
+    "price": 162.5,
+    "room": "Bedroom",
+    "productType": "Chest of Drawers",
+    "collectionNames": [
+      "Bedroom",
+      "Manchester",
+      "Mirror"
+    ],
+    "imageUrls": [
+      "https://cedora.com.au/cdn/shop/files/M-Mirror-Measurement.jpg?v=1762227032"
+    ]
+  },
+  {
+    "productId": 8943621701882,
+    "name": "Newcastle Double Bed Frame",
+    "handle": "newcastle-double-bed-frame-1",
+    "productUrl": "https://cedora.com.au/products/newcastle-double-bed-frame-1",
+    "price": 1150,
+    "room": "Bedroom",
+    "productType": "Bed Frame",
+    "collectionNames": [
+      "Bed Frames",
+      "Bedroom",
+      "Newcastle",
+      "Newcastle Bed Frames"
+    ],
+    "imageUrls": [
+      "https://cedora.com.au/cdn/shop/files/N-Bed-Double-_Measurement.jpg?v=1761800431"
+    ]
+  },
+  {
+    "productId": 8943620456698,
+    "name": "Newcastle King Bed Frame",
+    "handle": "newcastle-king-bed-frame-1",
+    "productUrl": "https://cedora.com.au/products/newcastle-king-bed-frame-1",
+    "price": 1350,
+    "room": "Bedroom",
+    "productType": "Bed Frame",
+    "collectionNames": [
+      "Bed Frames",
+      "Bedroom",
+      "Newcastle",
+      "Newcastle Bed Frames"
+    ],
+    "imageUrls": [
+      "https://cedora.com.au/cdn/shop/files/N-Bed-King-_Measurement.jpg?v=1761800485"
+    ]
+  },
+  {
+    "productId": 8943620096250,
+    "name": "Newcastle Queen Bed Frame",
+    "handle": "newcastle-queen-bed-frame-1",
+    "productUrl": "https://cedora.com.au/products/newcastle-queen-bed-frame-1",
+    "price": 995,
+    "room": "Bedroom",
+    "productType": "Bed Frame",
+    "collectionNames": [
+      "Bed Frames",
+      "Bedroom",
+      "Newcastle",
+      "Newcastle Bed Frames",
+      "Pre-order"
+    ],
+    "imageUrls": [
+      "https://cedora.com.au/cdn/shop/files/N-Bed-Queen-_Measurement.jpg?v=1761800527"
+    ]
+  },
+  {
+    "productId": 8943619408122,
+    "name": "Newcastle Mirror",
+    "handle": "newcastle-mirror-1",
+    "productUrl": "https://cedora.com.au/products/newcastle-mirror-1",
+    "price": 195,
+    "room": "Bedroom",
+    "productType": "Mirror",
+    "collectionNames": [
+      "Bedroom",
+      "Mirror",
+      "Newcastle"
+    ],
+    "imageUrls": [
+      "https://cedora.com.au/cdn/shop/files/N-Mirror_-_Measurement.jpg?v=1761800720"
+    ]
+  },
+  {
+    "productId": 8943618851066,
+    "name": "Newcastle 6 Drawer Chest",
+    "handle": "newcastle-6-drawer-chest-1",
+    "productUrl": "https://cedora.com.au/products/newcastle-6-drawer-chest-1",
+    "price": 1019.15,
+    "room": "Bedroom",
+    "productType": "Chest of Drawers",
+    "collectionNames": [
+      "Bedroom",
+      "Chest",
+      "Newcastle"
+    ],
+    "imageUrls": [
+      "https://cedora.com.au/cdn/shop/files/N-Chest_-_Measurement.jpg?v=1761804728"
+    ]
+  },
+  {
+    "productId": 8943618588922,
+    "name": "Newcastle 5 Drawer Tallboy",
+    "handle": "newcastle-5-drawer-tallboy-1",
+    "productUrl": "https://cedora.com.au/products/newcastle-5-drawer-tallboy-1",
+    "price": 934.15,
+    "room": "Bedroom",
+    "productType": "Tallboy",
+    "collectionNames": [
+      "Bedroom",
+      "Newcastle",
+      "Tallboy"
+    ],
+    "imageUrls": [
+      "https://cedora.com.au/cdn/shop/files/N-Tallboy_-_Measurement.jpg?v=1761804796"
+    ]
+  },
+  {
+    "productId": 8943617671418,
+    "name": "Newcastle 2 Drawer Bedside Table",
+    "handle": "newcastle-2-drawer-bedside-table-1",
+    "productUrl": "https://cedora.com.au/products/newcastle-2-drawer-bedside-table-1",
+    "price": 339.15,
+    "room": "Bedroom",
+    "productType": "Bedside Table",
+    "collectionNames": [
+      "Bedroom",
+      "Bedside table",
+      "Newcastle"
+    ],
+    "imageUrls": [
+      "https://cedora.com.au/cdn/shop/files/N-Beside_Table_-_Measurement.jpg?v=1761804890"
+    ]
+  },
+  {
+    "productId": 8920383389946,
+    "name": "London Double Bed Frame",
+    "handle": "london-double-bed-frame",
+    "productUrl": "https://cedora.com.au/products/london-double-bed-frame",
+    "price": 935,
+    "room": "Bedroom",
+    "productType": "Bed Frame",
+    "collectionNames": [
+      "Bed Frames",
+      "Bedroom",
+      "London",
+      "London Bed Frames"
+    ],
+    "imageUrls": [
+      "https://cedora.com.au/cdn/shop/files/L-Double-Measurement.jpg?v=1761626528"
+    ]
+  },
+  {
+    "productId": 8920382865658,
+    "name": "London King Bed Frame",
+    "handle": "london-king-bed-frame",
+    "productUrl": "https://cedora.com.au/products/london-king-bed-frame",
+    "price": 1105,
+    "room": "Bedroom",
+    "productType": "Bed Frame",
+    "collectionNames": [
+      "Bed Frames",
+      "Bedroom",
+      "London",
+      "London Bed Frames"
+    ],
+    "imageUrls": [
+      "https://cedora.com.au/cdn/shop/files/L-King-Measurement.jpg?v=1761637419"
+    ]
+  },
+  {
+    "productId": 8920382046458,
+    "name": "London Queen Bed Frame",
+    "handle": "london-queen-bed-frame",
+    "productUrl": "https://cedora.com.au/products/london-queen-bed-frame",
+    "price": 1200,
+    "room": "Bedroom",
+    "productType": "Bed Frame",
+    "collectionNames": [
+      "Bed Frames",
+      "Bedroom",
+      "London",
+      "London Bed Frames"
+    ],
+    "imageUrls": [
+      "https://cedora.com.au/cdn/shop/files/L-Queen_-_Measurement.jpg?v=1761638511"
+    ]
+  },
+  {
+    "productId": 8920380276986,
+    "name": "London Double Bed - 2 Drawers",
+    "handle": "london-double-bed-2-drawers",
+    "productUrl": "https://cedora.com.au/products/london-double-bed-2-drawers",
+    "price": 1300,
+    "room": "Bedroom",
+    "productType": "Bed",
+    "collectionNames": [
+      "Bed Frames",
+      "Bedroom",
+      "London",
+      "London Bed Frames"
+    ],
+    "imageUrls": [
+      "https://cedora.com.au/cdn/shop/files/L-Drawers-Double_Bed_-_Measurement.jpg?v=1761558984"
+    ]
+  },
+  {
+    "productId": 8920375558394,
+    "name": "London King Bed - 2 Drawers",
+    "handle": "london-king-bed-2-drawers",
+    "productUrl": "https://cedora.com.au/products/london-king-bed-2-drawers",
+    "price": 1275,
+    "room": "Bedroom",
+    "productType": "Bed",
+    "collectionNames": [
+      "Bed Frames",
+      "Bedroom",
+      "London",
+      "London Bed Frames"
+    ],
+    "imageUrls": [
+      "https://cedora.com.au/cdn/shop/files/L-Drawers-King_Bed_-_Measurement.jpg?v=1761558803"
+    ]
+  },
+  {
+    "productId": 8920363925754,
+    "name": "London Queen Bed - 2 Drawers",
+    "handle": "london-queen-bed-2-drawers",
+    "productUrl": "https://cedora.com.au/products/london-queen-bed-2-drawers",
+    "price": 1190,
+    "room": "Bedroom",
+    "productType": "Bed",
+    "collectionNames": [
+      "Bed Frames",
+      "Bedroom",
+      "London",
+      "London Bed Frames"
+    ],
+    "imageUrls": [
+      "https://cedora.com.au/cdn/shop/files/L-Drawers-Queen_Bed_-_Measurement.jpg?v=1761558698"
+    ]
+  },
+  {
+    "productId": 8920342495482,
+    "name": "London Mirror",
+    "handle": "london-mirror-1",
+    "productUrl": "https://cedora.com.au/products/london-mirror-1",
+    "price": 162.5,
+    "room": "Bedroom",
+    "productType": "Mirror",
+    "collectionNames": [
+      "Bedroom",
+      "London",
+      "Mirror"
+    ],
+    "imageUrls": [
+      "https://cedora.com.au/cdn/shop/files/L-Mirror_-_Measurement.jpg?v=1761637739"
+    ]
+  },
+  {
+    "productId": 8920338596090,
+    "name": "London 6 Drawer Chest",
+    "handle": "london-6-drawer-chest",
+    "productUrl": "https://cedora.com.au/products/london-6-drawer-chest",
+    "price": 760,
+    "room": "Bedroom",
+    "productType": "Chest of Drawers",
+    "collectionNames": [
+      "Bedroom",
+      "Chest",
+      "London",
+      "Pre-order"
+    ],
+    "imageUrls": [
+      "https://cedora.com.au/cdn/shop/files/L-Drawer_Chest_-_Measurement.jpg?v=1761558324"
+    ]
+  },
+  {
+    "productId": 8920335417594,
+    "name": "London 5 Drawer Tallboy",
+    "handle": "london-5-drawer-tallboy",
+    "productUrl": "https://cedora.com.au/products/london-5-drawer-tallboy",
+    "price": 850,
+    "room": "Bedroom",
+    "productType": "Tallboy",
+    "collectionNames": [
+      "Bedroom",
+      "London",
+      "Tallboy"
+    ],
+    "imageUrls": [
+      "https://cedora.com.au/cdn/shop/files/L-Drawer_Tallboy_-_Measurement.jpg?v=1761557979"
+    ]
+  },
+  {
+    "productId": 8919980343546,
+    "name": "London 2 Drawer Bedside Table",
+    "handle": "london-2-drawer-bedside-table-1",
+    "productUrl": "https://cedora.com.au/products/london-2-drawer-bedside-table-1",
+    "price": 254.15,
+    "room": "Bedroom",
+    "productType": "Bedside Table",
+    "collectionNames": [
+      "Bedroom",
+      "Bedside table",
+      "London"
+    ],
+    "imageUrls": [
+      "https://cedora.com.au/cdn/shop/files/L-Beside_Table_-_Measurement.jpg?v=1761636117"
+    ]
+  },
+  {
+    "productId": 8929275805946,
+    "name": "Bristol Double Bed Frame",
+    "handle": "bristol-double-bed-frame-1",
+    "productUrl": "https://cedora.com.au/products/bristol-double-bed-frame-1",
+    "price": 674.25,
+    "room": "Bedroom",
+    "productType": "Bed Frame",
+    "collectionNames": [
+      "Bed Frames",
+      "Bedroom",
+      "Bristol",
+      "Bristol Bed Frames"
+    ],
+    "imageUrls": [
+      "https://cedora.com.au/cdn/shop/files/B-Bed-Double-_Measurement.jpg?v=1761805055"
+    ]
+  },
+  {
+    "productId": 8929275085050,
+    "name": "Bristol King Bed Frame",
+    "handle": "bristol-king-bed-frame-1",
+    "productUrl": "https://cedora.com.au/products/bristol-king-bed-frame-1",
+    "price": 824.25,
+    "room": "Bedroom",
+    "productType": "Bed Frame",
+    "collectionNames": [
+      "Bed Frames",
+      "Bedroom",
+      "Bristol",
+      "Bristol Bed Frames"
+    ],
+    "imageUrls": [
+      "https://cedora.com.au/cdn/shop/files/B-Bed-King-_Measurement.jpg?v=1761805082"
+    ]
+  },
+  {
+    "productId": 8929274659066,
+    "name": "Bristol Queen Bed Frame",
+    "handle": "bristol-queen-bed-frame-1",
+    "productUrl": "https://cedora.com.au/products/bristol-queen-bed-frame-1",
+    "price": 749.25,
+    "room": "Bedroom",
+    "productType": "Bed Frame",
+    "collectionNames": [
+      "Bed Frames",
+      "Bedroom",
+      "Bristol",
+      "Bristol Bed Frames"
+    ],
+    "imageUrls": [
+      "https://cedora.com.au/cdn/shop/files/B-Bed-Queen-_Measurement.jpg?v=1761805108"
+    ]
+  },
+  {
+    "productId": 8929273643258,
+    "name": "Bristol Mirror",
+    "handle": "bristol-mirror-1",
+    "productUrl": "https://cedora.com.au/products/bristol-mirror-1",
+    "price": 162.5,
+    "room": "Bedroom",
+    "productType": "Mirror",
+    "collectionNames": [
+      "Bedroom",
+      "Bristol",
+      "Mirror"
+    ],
+    "imageUrls": [
+      "https://cedora.com.au/cdn/shop/files/B-Mirror_-_Measurement.jpg?v=1761805327"
+    ]
+  },
+  {
+    "productId": 8929272824058,
+    "name": "Bristol 6 Drawer Chest",
+    "handle": "bristol-6-drawer-chest-1",
+    "productUrl": "https://cedora.com.au/products/bristol-6-drawer-chest-1",
+    "price": 849.15,
+    "room": "Bedroom",
+    "productType": "Chest of Drawers",
+    "collectionNames": [
+      "Bedroom",
+      "Bristol",
+      "Chest"
+    ],
+    "imageUrls": [
+      "https://cedora.com.au/cdn/shop/files/B-Chest_-_Measurement.jpg?v=1761805384"
+    ]
+  },
+  {
+    "productId": 8929271611642,
+    "name": "Bristol 5 Drawer Tallboy",
+    "handle": "bristol-5-drawer-tallboy-1",
+    "productUrl": "https://cedora.com.au/products/bristol-5-drawer-tallboy-1",
+    "price": 764.15,
+    "room": "Bedroom",
+    "productType": "Tallboy",
+    "collectionNames": [
+      "Bedroom",
+      "Bristol",
+      "Tallboy"
+    ],
+    "imageUrls": [
+      "https://cedora.com.au/cdn/shop/files/B-Tallboy_-_Measurement.jpg?v=1761805539"
+    ]
+  },
+  {
+    "productId": 8929269907706,
+    "name": "Bristol 2 Drawer Bedside Table",
+    "handle": "bristol-2-drawer-bedside-table-1",
+    "productUrl": "https://cedora.com.au/products/bristol-2-drawer-bedside-table-1",
+    "price": 297.5,
+    "room": "Bedroom",
+    "productType": "Bedside Table",
+    "collectionNames": [
+      "Bedroom",
+      "Bedside table",
+      "Bristol"
+    ],
+    "imageUrls": [
+      "https://cedora.com.au/cdn/shop/files/B-Beside_Table_-_Measurement.jpg?v=1761805584"
+    ]
+  }
+];
